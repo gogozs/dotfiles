@@ -1,0 +1,6 @@
+[
+
+/* Conflict correction */
+	{ "keys": ["super+alt+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":false} },
+	{ "keys": ["super+shift+alt+i"], "command": "show_panel", "args": {"panel": "incremental_find", "reverse":true} }
+]
