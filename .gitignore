@@ -1,13 +1,8 @@
 
-sublime/User/Package Control.cache/ad7758d143e99a76034aad71ae2a1f3b
-
-*.info
+sublime/User/Package Control.cache
 
 sublime/User/Package Control.last-run
 
 sublime/User/Package Control.system-ca-bundle
 
-
-*.vim
-
-vim/bundle/vim-airline/
+vim/bundle/
