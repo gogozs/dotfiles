@@ -33,7 +33,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif	"离开插入模式后�
 "inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 "inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 
-"let g:ycm_confirm_extra_conf=0 "关闭加载.ycm_extra_conf.py提示
+let g:ycm_confirm_extra_conf=0 "关闭加载.ycm_extra_conf.py提示
 
 let g:ycm_collect_identifiers_from_tags_files=1	" 开启 YCM 基于标签引擎
 let g:ycm_min_num_of_chars_for_completion=2	" 从第2个键入字符就开始罗列匹配项
