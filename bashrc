@@ -12,7 +12,7 @@ then
     alias vi='vim'
 elif [ ${TYPE} = Linux ]
 then 
-    echo 'Linux';
+    alias vi='vim'
 else 
     echo "Unsupported OS - ${TYPE}";
 fi
