@@ -6,7 +6,7 @@ var domains= {
   "gmail.com": 1,
   "s3.amazonaws.com": 1,
   "cdninstagram.com": 1,
-  "wunderlist.com": 1,
+  //"wunderlist.com": 1,
   //"apple.com": 1, 
   // "github.com": 1, 
   // "instapaper.com": 1, 
