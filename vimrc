@@ -117,9 +117,12 @@ if has("gui_running")
     set go-=L               " no scrollbar even if split
     set go-=R               " no scrollbar even if split
 
+
     " Make MacVim looks cool
     if has("gui_macvim")
         set guifont=Monaco:h13
+    elseif has("gui_gtk2")
+    " set guifont=Monospace:h13
 
     endif
 endif
