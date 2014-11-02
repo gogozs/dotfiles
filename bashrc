@@ -4,7 +4,7 @@ TYPE=`uname`;
 
 # General Settings
 export CLICOLOR=1
-export TERM=xterm-256color
+export TERM=xterm-256color # fix screen problem
 
 # Platform specific
 if [ ${TYPE} = Darwin ]
