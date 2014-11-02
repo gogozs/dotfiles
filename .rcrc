@@ -1,4 +1,0 @@
-EXCLUDES="sublime *osx* xcode* *terminal"
-HOSTNAME="song_mba"
-TAGS="git bash vim other"
-SYMLINK_DIRS="ShadowsocksX vim"
