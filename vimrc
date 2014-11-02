@@ -86,8 +86,8 @@ set number
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set laststatus=2    " always show the status line
 
-set lines=50 " 50 lines of text instead of 24,
-set columns=100
+"set lines=50 " 50 lines of text instead of 24,
+"set columns=100
 
 "--------------------------------------------------------------------------
 " Format Settings
