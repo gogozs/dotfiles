@@ -17,6 +17,7 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 "status line
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'jiangmiao/auto-pairs'
 
 if has("unix")
   let s:uname = system("uname")
@@ -84,6 +85,9 @@ set number
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set laststatus=2    " always show the status line
+
+set lines=50 " 50 lines of text instead of 24,
+set columns=100
 
 "--------------------------------------------------------------------------
 " Format Settings
