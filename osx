@@ -14,8 +14,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Dotfiles directory
 DOTFILE_DIR="${HOME}/code/dotfiles";
-SUBLIME_DIR="${DOTFILE_DIR}/sublime";
-TERM_PROFILE='tomorrow_night';
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -31,7 +29,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 #sudo nvram SystemAudioVolume=" "
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write com.apple.universalaccess reduceTransparency -bool false
 
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
@@ -169,7 +167,7 @@ defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
 
 # Show the full URL in the address bar (note: this still hides the scheme)
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool false
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
@@ -231,22 +229,6 @@ killall mds > /dev/null 2>&1
 # Make sure indexing is enabled for the main volume
 sudo mdutil -i on / > /dev/null
 
-###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
-
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
-
-# Use a modified Tomorrow Night theme by default in Terminal.app
-CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
-if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
-    open "${DOTFILE_DIR}/${TERM_PROFILE}.terminal";
-    sleep 1; # Wait a bit to make sure the theme is loaded
-    defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
-    defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
-    defaults import com.apple.Terminal "$HOME/Library/Preferences/com.apple.Terminal.plist"
-fi;
 
 ###############################################################################
 # Activity Monitor                                                            #
@@ -286,37 +268,14 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 # Enable Debug Menu in the Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
-###############################################################################
-# Transmission.app                                                            #
-###############################################################################
-
-# Don’t prompt for confirmation before downloading
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
-
-###############################################################################
-# Twitter.app                                                                 #
-###############################################################################
-
-# Allow closing the ‘new tweet’ window by pressing `Esc`
-defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
-
-###############################################################################
-# Sublime Text                                                                #
-###############################################################################
-
 
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
 for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-    "Mail" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" \
-    "Twitter" "iCal" "iTunes"; do
+    "Mail" "Safari" "SizeUp" "SystemUIServer"  \
+     "iCal" "iTunes"; do
     killall "$app" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
