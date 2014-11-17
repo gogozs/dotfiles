@@ -14,7 +14,7 @@ then
 elif [ ${TYPE} = Linux ]
 then 
     alias vi='vim'
-    unset SSH_ADKPASS # Prevent gnome-ssh-askpass dialogue
+    unset SSH_ASKPASS # Prevent gnome-ssh-askpass dialogue
 else 
     echo "Unsupported OS - ${TYPE}";
 fi
