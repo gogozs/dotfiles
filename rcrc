@@ -1,4 +1,5 @@
 EXCLUDES="sublime *osx* xcode* *terminal *README*"
 HOSTNAME="song_fedora"
 TAGS="git bash vim other"
-SYMLINK_DIRS="ShadowsocksX vim"
+SYMLINK_DIRS="ShadowsocksX vim config"
+

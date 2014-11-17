@@ -6,3 +6,7 @@ sublime/User/Package Control.last-run
 sublime/User/Package Control.system-ca-bundle
 
 vim/bundle/
+
+.DS_Store
+
+config/git/ignore
