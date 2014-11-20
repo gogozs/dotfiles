@@ -5,3 +5,9 @@ tag-vim/vim/bundle/
 .DS_Store
 
 config/git/ignore
+config/autostart/
+config/dconf/
+config/ibus/
+config/user-dirs.dirs
+config/user-dirs.locale
+config/xfce4/
