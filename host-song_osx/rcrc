@@ -1,0 +1,5 @@
+EXCLUDES="sublime *osx* xcode* *terminal *README*"
+HOSTNAME="song_osx"
+TAGS="git bash vim"
+SYMLINK_DIRS="vim config"
+
