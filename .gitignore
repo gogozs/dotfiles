@@ -11,3 +11,6 @@ config/ibus/
 config/user-dirs.dirs
 config/user-dirs.locale
 config/xfce4/
+
+emacs.d/auto-save-list
+
