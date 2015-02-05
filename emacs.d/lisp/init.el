@@ -1,14 +1,13 @@
 ;; General
 (setq inhibit-startup-message t)
 
-;disable toolbar					;
-(tool-bar-mode -1)
+;GUI Settings
+(when (display-graphic-p)
+  (tool-bar-mode -1) ;disable toolbar
+  (scroll-bar-mode -1) ;disable scrollbar
+  (auto-image-file-mode t) ;image support
+  )
 
-;disable scrollbar
-(scroll-bar-mode -1)
-
-;image support
-(auto-image-file-mode t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
