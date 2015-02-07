@@ -40,6 +40,9 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
+" slimv
+let g:lisp_rainbow=1
+
 
 "--------------------------------------------------------------------------
 " view  settings
@@ -84,7 +87,7 @@ if has("gui_running")
     set lines=50 " 50 lines of text instead of 24,
     set columns=100
     set guioptions-=T       " no toolbar
-   " set guioptions+=m       " Slimv menu
+    set guioptions+=m       " Slimv menu
     set go-=r               " no right scrollbar
     set go-=l               " no left scrollbar
     set go-=b               " no bottom scrollbar
@@ -96,7 +99,7 @@ if has("gui_running")
 
     " Make MacVim looks cool
     if has("gui_macvim")
-        set guifont=Monaco:h12
+        set guifont=Menlo:h12
     elseif has("gui_gtk2")
     " set guifont=Monospace:h13
 
