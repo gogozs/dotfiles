@@ -14,3 +14,5 @@ config/xfce4/
 
 emacs.d/auto-save-list
 
+
+emacs.d/ac-dict

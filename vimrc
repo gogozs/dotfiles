@@ -2,7 +2,7 @@ set nocompatible        " Must be first line
 filetype off "require by Vundle
 
 "--------------------------------------------------------------------------
-" Vundle & Plugins Settings
+" Vundle & Plugins settings
 "--------------------------------------------------------------------------
 
 " set the runtime path to include Vundle and initialize
@@ -19,12 +19,19 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/syntastic'
+"slimv
+Plugin 'kovisoft/slimv'
 
-" All of your Plugins must be added before the following line
+" all of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"Settings
+"Plugins settings
+"--------------------------------------------------------------------------
+
+" omni completion
+filetype plugin on
+set omnifunc=syntaxcomplete#complete
 
 " ctrlp
 let g:ctrlp_custom_ignore = {
@@ -35,18 +42,18 @@ let g:ctrlp_custom_ignore = {
 
 
 "--------------------------------------------------------------------------
-" View  Settings
+" view  settings
 "--------------------------------------------------------------------------
 
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-night
 
 
-" Enable syntax hightlighting
+" enable syntax hightlighting
 syntax on
-" Enable line numbers
+" enable line numbers
 set number
-" Show “invisible” characters
+" show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set laststatus=2    " always show the status line
 
@@ -54,29 +61,30 @@ set laststatus=2    " always show the status line
 "set columns=100
 
 "--------------------------------------------------------------------------
-" Format Settings
+" format settings
 "--------------------------------------------------------------------------
 
-set encoding=utf-8 nobomb   " Use UTF-8 without BOM
+set encoding=utf-8 nobomb   " use utf-8 without bom
 
-" Common tabs settings
-set tabstop=4               " The width of a TAB is set to 4.
-                            " Still it is a \t. It is just that
-                            " Vim will interpret it to be having
+" common tabs settings
+set tabstop=4               " the width of a tab is set to 4.
+                            " still it is a \t. it is just that
+                            " vim will interpret it to be having
                             " a width of 4.
-set softtabstop=4           " Sets the number of columns for a TAB.
-set shiftwidth=4            " Indents will have a width of 4.
-set expandtab               " Expand TABs to spaces.
+set softtabstop=4           " sets the number of columns for a tab.
+set shiftwidth=4            " indents will have a width of 4.
+set expandtab               " expand tabs to spaces.
 
 set autoindent
 
 "--------------------------------------------------------------------------
-" GUI Settings
+" GUI settings
 "--------------------------------------------------------------------------
 if has("gui_running")
     set lines=50 " 50 lines of text instead of 24,
     set columns=100
     set guioptions-=T       " no toolbar
+   " set guioptions+=m       " Slimv menu
     set go-=r               " no right scrollbar
     set go-=l               " no left scrollbar
     set go-=b               " no bottom scrollbar
@@ -88,7 +96,7 @@ if has("gui_running")
 
     " Make MacVim looks cool
     if has("gui_macvim")
-        set guifont=Monaco:h13
+        set guifont=Monaco:h12
     elseif has("gui_gtk2")
     " set guifont=Monospace:h13
 
@@ -96,7 +104,7 @@ if has("gui_running")
 endif
 
 "--------------------------------------------------------------------------
-" Main Settings
+" Main settings
 "--------------------------------------------------------------------------
 
 "no mouse

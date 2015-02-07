@@ -1,4 +1,6 @@
+
 ;; General
+;;------------------------------------------------------------
 (setq inhibit-startup-message t)
 
 ;GUI Settings
@@ -15,13 +17,25 @@
 (setq visible-bell t) 
 
 ;parenthess
-(show-paren-mode t)
+(show-paren-mode t)n
 (setq show-paren-style 'parentheses)
 
 
 ;; View Setting
+;;------------------------------------------------------------
 (set-default-font "Menlo 13")
-(load "~/.emacs.d/lisp/base16-tomorrow-theme.el")
+(load "~/.emacs.d/lisp/base16-eighties-theme.el")
 
 ;; Program Setting
+;;------------------------------------------------------------
 (setq scheme-program-name "/usr/local/bin/scheme")
+
+;; Encoding
+;;------------------------------------------------------------
+(prefer-coding-system 'utf-8)
+
+;; Plugin
+;;------------------------------------------------------------
+;; Auto complete
+;;(require 'auto-complete-config)
+;;(ac-config-default)
