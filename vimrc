@@ -41,7 +41,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " slimv
-let g:lisp_rainbow=1
+"let g:lisp_rainbow=1
 
 
 "--------------------------------------------------------------------------
