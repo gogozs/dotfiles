@@ -49,7 +49,8 @@ let g:ctrlp_custom_ignore = {
 "--------------------------------------------------------------------------
 
 set background=dark
-colorscheme Tomorrow-night
+"colorscheme Tomorrow-night
+colorscheme Tomorrow-Night-Eighties
 
 
 " enable syntax hightlighting
