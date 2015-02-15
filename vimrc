@@ -68,7 +68,10 @@ set laststatus=2    " always show the status line
 " format settings
 "--------------------------------------------------------------------------
 
-set encoding=utf-8 nobomb   " use utf-8 without bom
+set encoding=utf-8 nobomb   " Vim inside encoding (buffer, register...)
+set fileencoding=utf-8  nobomb " New file encoding 
+" Auto file encoding detection order
+set fileencodings=ucs-bom,utf-8,gb2312,gbk,gb18030,big5,euc-jp,euc-kr,latin1 
 
 " common tabs settings
 set tabstop=4               " the width of a tab is set to 4.
