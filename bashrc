@@ -16,7 +16,7 @@ then
     alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
     alias vi='vim'
     export PATH=/usr/local/sbin:$PATH
-    export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig # handle mpv error
+    #export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig # handle mpv error
 elif [ ${TYPE} = Linux ]
 then 
     alias vi='vim'
