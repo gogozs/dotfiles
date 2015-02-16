@@ -16,3 +16,5 @@ emacs.d/auto-save-list
 
 
 emacs.d/ac-dict
+
+config/mpv/watch_later
