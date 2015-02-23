@@ -69,7 +69,7 @@ set laststatus=2    " always show the status line
 "--------------------------------------------------------------------------
 
 set encoding=utf-8 nobomb   " Vim inside encoding (buffer, register...)
-set fileencoding=utf-8  nobomb " New file encoding 
+set fileencoding=utf-8 nobomb " New file encoding 
 " Auto file encoding detection order
 set fileencodings=ucs-bom,utf-8,gb2312,gbk,gb18030,big5,euc-jp,euc-kr,latin1 
 
