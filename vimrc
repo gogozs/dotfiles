@@ -13,7 +13,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " color scheme
-Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'chriskempson/base16-vim'
 "status line
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
@@ -47,11 +47,10 @@ let g:ctrlp_custom_ignore = {
 "--------------------------------------------------------------------------
 " view  settings
 "--------------------------------------------------------------------------
-
+let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark
-"colorscheme Tomorrow-night
-colorscheme Tomorrow-Night-Eighties
-
+"colorscheme 
+colorscheme base16-eighties
 
 " enable syntax hightlighting
 syntax on
