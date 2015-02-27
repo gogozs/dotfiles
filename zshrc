@@ -82,3 +82,20 @@ source $ZSH/oh-my-zsh.sh
 # Base 16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 [[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
+
+
+# Detect OS
+UNAME=`uname`
+
+# Platform specific
+if [[ $UNAME == 'Darwin' ]]; then
+    alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+    alias vi='vim'
+    export PATH=/usr/local/sbin:$PATH
+    #export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig # handle mpv error
+elif [[ $UNAME == 'Linux' ]]; then
+    alias vi='vim'
+    unset SSH_ASKPASS # Prevent gnome-ssh-askpass dialogue
+else 
+    echo "Unsupported OS $UNAME";
+fi
