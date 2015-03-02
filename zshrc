@@ -49,7 +49,6 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -92,6 +91,7 @@ UNAME=`uname`
 if [[ $UNAME == 'Darwin' ]]; then
     alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
     alias vi='vim'
+    export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/sbin"
     export PATH=/usr/local/sbin:$PATH
     #export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig # handle mpv error
 elif [[ $UNAME == 'Linux' ]]; then
