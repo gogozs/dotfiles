@@ -12,15 +12,25 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" color scheme
+"" Color scheme
 Plugin 'chriskempson/base16-vim'
-"status line
+
+"slimv
+Plugin 'kovisoft/slimv' 
+" git wrapper
+Plugin 'tpope/vim-fugitive'
+" tabular
+Plugin 'godlygeek/tabular'
+
+"" Enhanced file formats
+Plugin 'plasticboy/vim-markdown'
+Plugin 'elzr/vim-json'
+
+"" Misc
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/syntastic'
-"slimv
-Plugin 'kovisoft/slimv'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +53,9 @@ let g:ctrlp_custom_ignore = {
 " slimv
 "let g:lisp_rainbow=1
 
+" markdown 
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_frontmatter=1 " Highlight YAML frontmatter as used by Jekyll 
 
 "--------------------------------------------------------------------------
 " view  settings
@@ -58,7 +71,17 @@ syntax on
 set number
 " show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set laststatus=2    " always show the status line
+
+if has('statusline')
+    set laststatus=2    " always show the status line
+
+    " airline config
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+    let g:airline_symbols.branch='⑂'
+
+endif
 
 "set lines=50 " 50 lines of text instead of 24,
 "set columns=100

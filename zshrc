@@ -79,6 +79,9 @@ export LC_ALL=zh_CN.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Alias
+alias du="du -h"
+
 # Base 16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 [[ -s $BASE16_SHELL  ]] && source $BASE16_SHELL
