@@ -19,8 +19,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'kovisoft/slimv' 
 " git wrapper
 Plugin 'tpope/vim-fugitive'
-" tabular
-Plugin 'godlygeek/tabular'
 
 "" Enhanced file formats
 Plugin 'plasticboy/vim-markdown'
@@ -131,6 +129,29 @@ if has("gui_running")
 
     endif
 endif
+
+"--------------------------------------------------------------------------
+" Key Mappings 
+"--------------------------------------------------------------------------
+
+" modifer key
+let mapleader = " "
+
+" Toggle search highlighting
+noremap <leader>/ :nohls<cr><c-l>
+
+" Code folding options
+"nmap <leader>f0 :set foldlevel=0<cr>
+"nmap <leader>f1 :set foldlevel=1<cr>
+"nmap <leader>f2 :set foldlevel=2<cr>
+"nmap <leader>f3 :set foldlevel=3<cr>
+"nmap <leader>f4 :set foldlevel=4<cr>
+"nmap <leader>f5 :set foldlevel=5<cr>
+"nmap <leader>f6 :set foldlevel=6<cr>
+"nmap <leader>f7 :set foldlevel=7<cr>
+"nmap <leader>f8 :set foldlevel=8<cr>
+"nmap <leader>f9 :set foldlevel=9<cr>
+
 
 "--------------------------------------------------------------------------
 " Main settings
