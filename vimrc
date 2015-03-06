@@ -20,7 +20,10 @@ Plugin 'kovisoft/slimv'
 " git wrapper
 Plugin 'tpope/vim-fugitive'
 
-"" Enhanced file formats
+""" Format
+Plugin 'tpope/vim-surround'
+
+""" Enhanced file formats
 Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
 
@@ -104,6 +107,13 @@ set expandtab               " expand tabs to spaces.
 
 set autoindent
 
+"enable fold
+set foldenable
+set foldnestmax=3
+set foldmethod=syntax
+
+"set autochdir
+
 "--------------------------------------------------------------------------
 " GUI settings
 "--------------------------------------------------------------------------
@@ -140,6 +150,9 @@ let mapleader = " "
 " Toggle search highlighting
 noremap <leader>/ :nohls<cr><c-l>
 
+" insert newline in nornal mode <NL> = <C-J>
+nnoremap <NL> i<CR><ESC>
+
 " Code folding options
 "nmap <leader>f0 :set foldlevel=0<cr>
 "nmap <leader>f1 :set foldlevel=1<cr>
@@ -152,6 +165,16 @@ noremap <leader>/ :nohls<cr><c-l>
 "nmap <leader>f8 :set foldlevel=8<cr>
 "nmap <leader>f9 :set foldlevel=9<cr>
 
+"--------------------------------------------------------------------------
+" Functions 
+"--------------------------------------------------------------------------
+
+" open markdown file in MacDown.app
+function! s:setupMarkup()
+    nnoremap <leader>p :silent !open -a MacDown '%:p'<cr>
+endfunction
+
+au BufRead,BufNewfile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
 "--------------------------------------------------------------------------
 " Main settings
