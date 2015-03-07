@@ -63,6 +63,8 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
+nnoremap <leader>m :CtrlPMRUFiles<cr>
+
 " slimv
 "let g:lisp_rainbow=1
 
