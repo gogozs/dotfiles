@@ -96,7 +96,8 @@ if [[ $UNAME == 'Darwin' ]]; then
     alias vi='vim'
     export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/sbin"
     export PATH=/usr/local/sbin:$PATH
-    #export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig # handle mpv error elif [[ $UNAME == 'Linux' ]]; then
+    #export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig # handle mpv error 
+	elif [[ $UNAME == 'Linux' ]]; then
     alias vi='vim'
     unset SSH_ASKPASS # Prevent gnome-ssh-askpass dialogue
 else 
