@@ -54,8 +54,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-export LANG=zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -96,8 +96,7 @@ if [[ $UNAME == 'Darwin' ]]; then
     alias vi='vim'
     export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/sbin"
     export PATH=/usr/local/sbin:$PATH
-    #export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig # handle mpv error
-elif [[ $UNAME == 'Linux' ]]; then
+    #export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig # handle mpv error elif [[ $UNAME == 'Linux' ]]; then
     alias vi='vim'
     unset SSH_ASKPASS # Prevent gnome-ssh-askpass dialogue
 else 

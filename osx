@@ -13,7 +13,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Dotfiles directory
-DOTFILE_DIR="${HOME}/code/dotfiles";
+DOTFILE_DIR="${HOME}/.dotfile";
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -92,7 +92,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 ###############################################################################
 
 # Set the icon size of Dock items to 58 pixels
-defaults write com.apple.dock tilesize -int 58
+#defaults write com.apple.dock tilesize -int 58
 
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
