@@ -39,9 +39,8 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
-
+"Plugin 'ervandew/supertab'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,8 +50,8 @@ filetype plugin indent on    " required
 "--------------------------------------------------------------------------
 
 " omni completion
-"filetype plugin on
-"set omnifunc=syntaxcomplete#complete
+filetype plugin on
+set omnifunc=syntaxcomplete#complete
 
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf   
@@ -73,8 +72,8 @@ let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_frontmatter=1 " Highlight YAML frontmatter as used by Jekyll 
 
 " YouCompleteMe
-nnoremap <leader>g :YcmCompleter GoTo<CR>
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"nnoremap <leader>g :YcmCompleter GoTo<CR>
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 "let g:ycm_filetype_blacklist = {
 "			\ 'tagbar'    : 1,
@@ -93,9 +92,9 @@ nnoremap <leader>. :CtrlPTag<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-f>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Tabular
 nmap <leader>a& :Tabularize /&<CR>
