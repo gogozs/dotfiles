@@ -80,7 +80,8 @@ export LC_ALL=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Alias
-alias du="du -h"
+alias du="du -h -d 1"
+alias df="df -h"
 
 # Base 16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
