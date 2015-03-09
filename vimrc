@@ -46,6 +46,31 @@ Plugin 'majutsushi/tagbar'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"--------------------------------------------------------------------------
+" Key Mappings 
+"--------------------------------------------------------------------------
+
+" modifer key
+let mapleader = " "
+
+" Toggle search highlighting
+noremap <leader>/ :nohls<cr><c-l>
+
+" insert newline in nornal mode <NL> = <C-J>
+nnoremap <NL> i<CR><ESC>
+
+" Code folding options
+"nmap <leader>f0 :set foldlevel=0<cr>
+"nmap <leader>f1 :set foldlevel=1<cr>
+"nmap <leader>f2 :set foldlevel=2<cr>
+"nmap <leader>f3 :set foldlevel=3<cr>
+"nmap <leader>f4 :set foldlevel=4<cr>
+"nmap <leader>f5 :set foldlevel=5<cr>
+"nmap <leader>f6 :set foldlevel=6<cr>
+"nmap <leader>f7 :set foldlevel=7<cr>
+"nmap <leader>f8 :set foldlevel=8<cr>
+"nmap <leader>f9 :set foldlevel=9<cr>
+
 "Plugins settings
 "--------------------------------------------------------------------------
 
@@ -190,30 +215,6 @@ if has("gui_running")
     endif
 endif
 
-"--------------------------------------------------------------------------
-" Key Mappings 
-"--------------------------------------------------------------------------
-
-" modifer key
-let mapleader = " "
-
-" Toggle search highlighting
-noremap <leader>/ :nohls<cr><c-l>
-
-" insert newline in nornal mode <NL> = <C-J>
-nnoremap <NL> i<CR><ESC>
-
-" Code folding options
-"nmap <leader>f0 :set foldlevel=0<cr>
-"nmap <leader>f1 :set foldlevel=1<cr>
-"nmap <leader>f2 :set foldlevel=2<cr>
-"nmap <leader>f3 :set foldlevel=3<cr>
-"nmap <leader>f4 :set foldlevel=4<cr>
-"nmap <leader>f5 :set foldlevel=5<cr>
-"nmap <leader>f6 :set foldlevel=6<cr>
-"nmap <leader>f7 :set foldlevel=7<cr>
-"nmap <leader>f8 :set foldlevel=8<cr>
-"nmap <leader>f9 :set foldlevel=9<cr>
 
 "--------------------------------------------------------------------------
 " Functions 
